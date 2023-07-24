@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DashboardController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="250.0" layoutY="140.0" prefHeight="545.0" prefWidth="730.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane fx:id="title_bar" prefHeight="53.0" prefWidth="866.0" styleClass="title_bar" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+                     <Label layoutX="29.0" layoutY="15.0" text="Provision Store System | Admin Portal" textFill="WHITE">
+                        <font>
+                           <Font name="Tahoma Bold" size="17.0" />
+                        </font>
+                     </Label>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane fx:id="nav_bar" prefHeight="200.0" prefWidth="200.0" styleClass="nav_bar" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="139.0" text="Welcome," textFill="#fffafa">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="us" alignment="CENTER" layoutX="39.0" layoutY="164.0" prefHeight="30.0" prefWidth="123.0" text="Abraham" textAlignment="JUSTIFY" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Line endX="97.5" layoutX="90.0" layoutY="208.0" startX="-77.5" stroke="WHITE" />
+                        <Button fx:id="dashboard" alignment="CENTER" contentDisplay="CENTER" layoutY="246.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="37.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Dashboard" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="products" alignment="CENTER" layoutY="283.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Products" textFill="#fffafa">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="logout" contentDisplay="CENTER" layoutY="397.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="67.0" layoutX="57.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="86.0" />
+                        <Button layoutX="54.0" layoutY="336.0" mnemonicParsing="false" text="View Vendors" />
+                        <Button layoutX="65.0" layoutY="372.0" mnemonicParsing="false" text="View Bills" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="491.0" prefWidth="545.0" style="-fx-background-color: #a19999;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboard_view" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="491.0" prefWidth="666.0" style="-fx-border-radius: 10px; -fx-background-color: white;">
+                                 <children>
+                                    <AnchorPane layoutX="23.0" layoutY="14.0" prefHeight="173.0" prefWidth="620.0" style="-fx-background-color: #a19999;">
+                                       <children>
+                                          <AnchorPane layoutX="14.0" layoutY="17.0" prefHeight="140.0" prefWidth="185.0" style="-fx-background-color: #004e92; -fx-border-radius: 10;" />
+                                          <AnchorPane layoutX="215.0" layoutY="17.0" prefHeight="140.0" prefWidth="190.0" style="-fx-background-color: red;" />
+                                          <AnchorPane layoutX="416.0" layoutY="17.0" prefHeight="140.0" prefWidth="190.0" style="-fx-background-color: green;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AreaChart layoutX="79.0" layoutY="206.0" legendVisible="false" prefHeight="255.0" prefWidth="519.0" title="Income Chart Data">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </AreaChart>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="products_view" layoutX="11.0" layoutY="12.0" prefHeight="493.0" prefWidth="666.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TextField fx:id="search" layoutX="397.0" layoutY="26.0" prefHeight="25.0" prefWidth="185.0" styleClass="search" stylesheets="@styles.css" />
+                              <Button fx:id="search_btn" layoutX="589.0" layoutY="26.0" mnemonicParsing="false" onAction="#searchProduct" styleClass="search_btn" stylesheets="@styles.css" text="Search" textFill="WHITE" />
+                              <TableView fx:id="products_table" layoutX="33.0" layoutY="96.0" prefHeight="317.0" prefWidth="610.0" styleClass="table_view" stylesheets="@styles.css">
+                                <columns>
+                                  <TableColumn id="column_header" fx:id="pdIDColumn" prefWidth="119.0" text="Product ID" />
+                                  <TableColumn id="column_header" fx:id="pdNameColumn" prefWidth="126.0" text="Product Name" />
+                                    <TableColumn id="column_header" fx:id="pdCategoryColumn" prefWidth="122.0" text="Category" />
+                                    <TableColumn id="column_header" fx:id="pdQuantityColumn" prefWidth="107.0" text="Quantity" />
+                                    <TableColumn id="column_header" fx:id="pdPriceColumn" prefWidth="157.0" text="Price (Ghc)" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="add_btn" layoutX="475.0" layoutY="439.0" mnemonicParsing="false" onAction="#switchForm" styleClass="add_btn" stylesheets="@styles.css" text=" Add Item" textFill="WHITE" />
+                              <Button fx:id="remove_btn" layoutX="556.0" layoutY="439.0" mnemonicParsing="false" styleClass="remove_btn" stylesheets="@styles.css" text="Remove Item" textFill="WHITE" />
+                              <Text fill="#004e92" layoutX="33.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Text>
+                              <Button layoutX="44.0" layoutY="439.0" mnemonicParsing="false" text="Issued Items" />
+                              <Button layoutX="139.0" layoutY="439.0" mnemonicParsing="false" text="Button" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="add_item_view" layoutX="-1.0" layoutY="-1.0" prefHeight="494.0" prefWidth="667.0" visible="false">
+                           <children>
+                              <AnchorPane layoutX="19.0" layoutY="17.0" prefHeight="494.0" prefWidth="667.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Text layoutX="52.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Item">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="107.0" layoutY="159.0" prefHeight="25.0" prefWidth="223.0" />
+                                    <TextField layoutX="364.0" layoutY="242.0" prefHeight="25.0" prefWidth="203.0" />
+                                    <Button layoutX="482.0" layoutY="399.0" mnemonicParsing="false" text="Save" />
+                                    <Button layoutX="542.0" layoutY="399.0" mnemonicParsing="false" text="Cancel" />
+                                    <Label layoutX="109.0" layoutY="128.0" text="Product Name:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="109.0" layoutY="292.0" text="Date:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="109.0" layoutY="207.0" text="Quantity:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="363.0" layoutY="128.0" text="Category:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="364.0" layoutY="207.0" text="Price (Ghc):">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Spinner layoutX="107.0" layoutY="242.0" prefHeight="25.0" prefWidth="224.0" />
+                                    <ComboBox layoutX="363.0" layoutY="159.0" prefHeight="25.0" prefWidth="204.0" />
+                                    <DatePicker layoutX="110.0" layoutY="329.0" prefHeight="25.0" prefWidth="224.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,113 @@
+/* These styles are applied to the login page
+ *
+ *
+ *
+ */
+
+ .lg_left_side {
+    -fx-background-color:  linear-gradient(to top right, #000428, #004e92);
+
+ }
+
+ .login_email {
+    -fx-border-color: #004e92;
+ }
+
+ .login_pass {
+    -fx-border-color: #004e92;
+ }
+
+ .login_btn {
+    -fx-background-color: #004e92;
+ }
+
+
+ /*
+    Admin dashboard style
+  */
+
+ .title_bar {
+    -fx-background-color: linear-gradient(to top right, #000428, #004e92);
+ }
+
+ .nav_bar {
+    -fx-background-color: #000428;
+ }
+
+ .table_view {
+    -fx-border-radius: 5px;
+    -fx-background-color: transparent;
+    -fx-border-color: #004e92;
+    -fx-border-width: 2px;
+    -fx-padding: 0px;
+ }
+
+ .table_view .table_column {
+    -fx-alignment: CENTER;
+ }
+
+ .table_view .column_header_background {
+    -fx-background-color: linear-gradient(to top right, #000428, #004e92);
+    -fx-background-insets: 0 0 0 0;
+ }
+
+ .table_view .column_header, filter {
+    -fx-background-color: transparent;
+    -fx-size: 50px;
+ }
+
+ .search {
+    -fx-background-color: transparent;
+    -fx-border-color: #004e92;
+    -fx-border-width: 1px;
+
+    -fx-padding: 0px 0px 0px 28px;
+    -fx-font-family: "Tahoma";
+    -fx-font-size: 14px;
+ }
+
+ .search:focused {
+    -fx-border-width: 2px;
+ }
+
+ .search_btn {
+    -fx-background-color: #004e92;
+    -fx-font-weight: bold;
+
+
+ }
+
+ .add_btn {
+     -fx-background-color: #004e92;
+     -fx-font-weight: bold;
+
+  }
+
+  .remove_btn {
+      -fx-background-color: #004e92;
+      -fx-font-weight: bold;
+
+
+   }
+
+/*
+    sign up style
+ */
+
+ .create_account {
+    -fx-background-color: linear-gradient(to top right, #000428, #004e92);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+
+ }
+
+ .textbox {
+    -fx-border-color: #004e92;
+    -fx-border-width: 2px;
+ }
+
+ .to_login {
+    -fx-background-color: transparent;
+    -fx-text-fill: #004e92;
+    -fx-font-weight: bold;
+ }

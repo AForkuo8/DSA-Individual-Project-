@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoginController">
+   <children>
+      <AnchorPane prefHeight="458.0" prefWidth="672.0">
+         <children>
+            <AnchorPane fx:id="lg_left_side" prefHeight="458.0" prefWidth="323.0" styleClass="lg_left_side" stylesheets="@styles.css">
+               <children>
+                  <Line endX="134.0" layoutX="161.0" layoutY="47.0" startX="-67.0">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.2796208530805687">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8552631735801697" green="0.19797758758068085" blue="0.19797758758068085" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Line>
+                  <Line endX="117.0" layoutX="124.0" layoutY="369.0" startX="-100.0">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.7368420958518982" green="0.10233917832374573" blue="0.10233917832374573" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Line>
+                  <Line endX="-97.0" endY="-124.0" layoutX="116.0" layoutY="202.0" startX="-97.0" startY="128.0">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.2796208530805687">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8552631735801697" green="0.19797758758068085" blue="0.19797758758068085" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Line>
+                  <Line endX="137.0" endY="312.0" layoutX="171.0" layoutY="57.0" startX="137.0" startY="26.0">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.2796208530805687">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8552631735801697" green="0.19797758758068085" blue="0.19797758758068085" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Line>
+                  <Label layoutX="40.0" layoutY="199.0" prefHeight="23.0" prefWidth="251.0" text="Provision Store Management System" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ad_login" layoutX="323.0" layoutY="2.0" prefHeight="458.0" prefWidth="373.0" style="-fx-background-color: #fff;" stylesheets="@styles.css">
+               <children>
+                  <Text fx:id="login_label" fill="#f22727" layoutX="108.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #004e92;" text="Admin Login" textAlignment="CENTER">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="24.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="login_email" layoutX="65.0" layoutY="172.0" prefHeight="29.0" prefWidth="231.0" promptText="Email" style="-fx-border-width: 2;" styleClass="login_email" stylesheets="@styles.css" />
+                  <PasswordField fx:id="login_pass" layoutX="65.0" layoutY="215.0" prefHeight="29.0" prefWidth="231.0" promptText="Password" style="-fx-border-width: 2;" styleClass="login_pass" stylesheets="@styles.css" />
+                  <Button fx:id="login_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="257.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginBtnClick" prefHeight="31.0" prefWidth="231.0" stylesheets="@styles.css" text="Login" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Malgun Gothic Bold" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="create_account" />
+                        <String fx:value="login_btn" />
+                     </styleClass>
+                  </Button>
+                  <Label layoutX="66.0" layoutY="309.0" text="Don't have an account?" />
+                  <Button fx:id="to_signup" layoutX="193.0" layoutY="305.0" mnemonicParsing="false" onAction="#switchScreen" styleClass="to_login" stylesheets="@styles.css" text="Sign Up" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ad_signup" layoutX="323.0" layoutY="2.0" prefHeight="454.0" prefWidth="373.0" visible="false">
+               <children>
+                  <Text fill="#004e92" layoutX="157.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="24.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="sign_up_name" layoutX="134.0" layoutY="121.0" prefHeight="25.0" prefWidth="202.0" styleClass="textbox" stylesheets="@styles.css" />
+                  <TextField fx:id="sign_up_email" layoutX="134.0" layoutY="168.0" prefHeight="25.0" prefWidth="202.0" styleClass="textbox" stylesheets="@styles.css" />
+                  <TextField fx:id="store_name" layoutX="134.0" layoutY="215.0" prefHeight="25.0" prefWidth="202.0" styleClass="textbox" stylesheets="@styles.css" />
+                  <PasswordField fx:id="sign_up_pass" layoutX="134.0" layoutY="269.0" prefHeight="25.0" prefWidth="202.0" styleClass="textbox" stylesheets="@styles.css" />
+                  <PasswordField fx:id="sign_up_conPass" layoutX="134.0" layoutY="316.0" prefHeight="25.0" prefWidth="202.0" styleClass="textbox" stylesheets="@styles.css" />
+                  <Label layoutX="56.0" layoutY="125.0" style="-fx-text-fill: #004e92; -fx-font-weight: bold;" text="Full Name:" />
+                  <Label layoutX="85.0" layoutY="172.0" style="-fx-text-fill: #004e92; -fx-font-weight: bold;" text="Email:" />
+                  <Label layoutX="52.0" layoutY="219.0" style="-fx-text-fill: #004e92; -fx-font-weight: bold;" text="Store Name:" />
+                  <Label layoutX="64.0" layoutY="273.0" style="-fx-text-fill: #004e92; -fx-font-weight: bold;" text="Password:" />
+                  <Label layoutX="19.0" layoutY="320.0" style="-fx-text-fill: #004e92; -fx-font-weight: bold;" text="Confirm Password:" />
+                  <Button fx:id="create_account" layoutX="134.0" layoutY="362.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" styleClass="create_account" stylesheets="@styles.css" text="Create Account" />
+                  <Label layoutX="134.0" layoutY="407.0" text="Have an account already?" />
+                  <Button fx:id="to_login" layoutX="270.0" layoutY="403.0" mnemonicParsing="false" onAction="#switchScreen" styleClass="to_login" stylesheets="@styles.css" text="Log In" />
+                  <Label fx:id="nameError" layoutX="134.0" layoutY="98.0" prefHeight="17.0" prefWidth="202.0" textFill="RED" />
+                  <Label fx:id="emailError" layoutX="134.0" layoutY="150.0" prefHeight="17.0" prefWidth="202.0" textFill="RED" />
+                  <Label fx:id="storeNameError" layoutX="134.0" layoutY="197.0" prefHeight="17.0" prefWidth="202.0" textFill="RED" />
+                  <Label fx:id="passError" layoutX="134.0" layoutY="252.0" prefHeight="17.0" prefWidth="202.0" textFill="RED" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
